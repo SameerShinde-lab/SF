@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChatterPostTriggerActive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To (OnOff) control on ChatterPostTrigger apex trigger</description>
+    <label>ChatterPostTriggerActive</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

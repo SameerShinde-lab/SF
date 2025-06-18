@@ -1,0 +1,20 @@
+{
+  "packageDirectories": [
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "force-app",
+      "default": true,
+      "package": "Post2Task",
+      "versionDescription": ""
+    }
+  ],
+  "name": "2gpManagedPackageV2",
+  "namespace": "tpcsf",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "63.0",
+  "packageAliases": {
+    "Post2Task": "0HoUj00000001qXKAQ",
+    "Post2Task@0.1.0-1": "04tUj0000004IHhIAM"
+  }
+}
