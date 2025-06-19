@@ -38,13 +38,18 @@ Chatter Task Creator uses the TriggerSetting custom setting to control task crea
 
 ## 📝 How to Create a Task via Chatter
 
-👉 **Step-by-step:**
-1️⃣ Type `#task` → Press Enter → it turns blue  
-2️⃣ Mention the assignee → `@UserName` → Press Enter → it turns blue  
-3️⃣ On new line, type `1. ` + task subject  
-4️⃣ (Optional) Add due date → `#date MM/DD/YYYY` → Press Enter → it turns blue  
+How to Create a Task via Chatter:
+1.Start with #task – Type #task(Not Case-Sensitive), press Enter, and ensure it turns blue.
+2.Mention the Assignee – Type @UserName, press Enter, and confirm it turns blue.
+3.Enter the Task Subject:
+Press Enter to move to the next line.
+Type 1. followed by a space, then enter the task subject (e.g., Create an email for new prospect like welcome email).
+4.Add a Due Date (Optional):
+After the task subject, type #date(Not Case-Sensitive), press Enter to turn it blue, then enter the due date in MM/DD/YYYY format.
+5.If no date is mentioned, the system will assign the default due date based on the TaskActivityDate setting.
+Create Multiple Tasks:
+Press Enter to move to the next line and follow same steps
 
-🕒 If no date is mentioned, default due date is assigned per `TaskActivityDate` setting.
 
 ---
 
