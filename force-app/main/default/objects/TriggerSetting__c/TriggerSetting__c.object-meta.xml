@@ -4,7 +4,7 @@
     <description>The TriggerSetting custom setting contains two fields:
 1.ChatterCommentTrigger
 2.ChatterPostTriggerActive
-By default, both are inactive. You can activate or deactivate them anytime to enable or disable the task creation functionality.</description>
+By default, both are active. You can activate or deactivate them anytime to enable or disable the task creation functionality.</description>
     <enableFeeds>false</enableFeeds>
     <label>TriggerSetting</label>
     <visibility>Public</visibility>

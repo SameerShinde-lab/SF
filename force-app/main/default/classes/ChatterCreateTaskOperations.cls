@@ -1,6 +1,19 @@
 public class ChatterCreateTaskOperations {
 // Get the custom setting records
-    Public Static ChatterTaskCreation__c setting = ChatterTaskCreation__c.getall().values();
+    
+    Public Static ChatterTaskCreation__c setting = null;
+    
+    static {
+        List<ChatterTaskCreation__c> settingsList = ChatterTaskCreation__c.getAll().values();
+        if (!settingsList.isEmpty()) {
+            setting = settingsList[0];
+        } else {
+            // handle case where no settings exist
+            setting = new ChatterTaskCreation__c(TaskActivityDate__c = 0); // default value
+        }
+    }
+    
+    
     //Getting Custom Activity Date Value to add in task
     Public Static Integer CustomActivityDate = (Integer)setting.TaskActivityDate__c;
     

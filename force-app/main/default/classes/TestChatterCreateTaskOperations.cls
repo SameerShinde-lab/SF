@@ -1,5 +1,5 @@
 @isTest
-public class TestChatterPostTrigger {
+public class TestChatterCreateTaskOperations {
     @IsTest
     public static void testMD () {
         
