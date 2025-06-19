@@ -1,20 +1,62 @@
-# SF
+# Post2Task
 
-# Salesforce DX Project: Next Steps
+**Post2Task** is a Salesforce 2GP managed package designed for **Chatter task management use cases**.  
+It allows users to automate task creation from Chatter posts and comments.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+---
 
-## How Do You Plan to Deploy Your Changes?
+## 📌 Features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+✅ Automatically create tasks from Chatter posts and comments  
+✅ Extract task details like:
+- Assignee
+- Subject
+- Due date (auto-calculated if not specified)
 
-## Configure Your Salesforce DX Project
+✅ Highly customizable to suit a wide variety of use cases  
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+---
 
-## Read All About It
+## ⚙️ Setup Instructions
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### 1️⃣  Trigger Settings
+Chatter Task Creator uses the TriggerSetting custom setting to control task creation. By default, ChatterCommentTrigger and ChatterPostTriggerActive are enabled, but users can deactivate them to turn off task automation.
+
+- Go to `TriggerSetting` custom setting
+- Fields:
+  - `ChatterCommentTrigger` → Set `true/false` to enable/disable comment task creation  
+  - `ChatterPostTriggerActive` → Set `true/false` to enable/disable post task creation  
+
+---
+
+### 2️⃣ Handling Task Due Dates
+- When commenting or posting on Chatter, if you do not mention #date MM/DD/YYYY, the system assigns      today’s date as the default due date
+- The Chatter Task Creation custom setting includes a field TaskActivityDate (Number field).
+- If you set this value to 5, then the due date for tasks (without a mentioned date) will be set to today + 5 days. 
+
+---
+
+## 📝 How to Create a Task via Chatter
+
+👉 **Step-by-step:**
+1️⃣ Type `#task` → Press Enter → it turns blue  
+2️⃣ Mention the assignee → `@UserName` → Press Enter → it turns blue  
+3️⃣ On new line, type `1. ` + task subject  
+4️⃣ (Optional) Add due date → `#date MM/DD/YYYY` → Press Enter → it turns blue  
+
+🕒 If no date is mentioned, default due date is assigned per `TaskActivityDate` setting.
+
+---
+
+## 🚫 Limitations
+❗ File upload via Chatter is not linked to task creation.  
+
+---
+
+## 📂 Source
+This package is part of a 2GP managed package for Salesforce AppExchange.
+
+---
+
+## 📞 Support
+For help, contact: [supports@twopirconsulting.com]
