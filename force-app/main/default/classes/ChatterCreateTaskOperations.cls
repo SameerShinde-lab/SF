@@ -1,4 +1,4 @@
-public class ChatterCreateTaskOperations {
+public with sharing class ChatterCreateTaskOperations {
 // Get the custom setting records
     
     Public Static ChatterTaskCreation__c setting = null;
