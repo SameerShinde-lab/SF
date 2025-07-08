@@ -80,10 +80,14 @@ public with sharing class ChatterCreateTaskOperations {
             Map<String, User> userId = new Map<String, User>();
             String pId = parentId;
             
-            // Query User records by names extracted from feed body
-            for(User us : [SELECT id, Name FROM User WHERE Name = :uName])
-            {
-                userId.put(us.Name, us);
+          // 🚨 CHANGED: Added object access check for User object (ApexCRUDViolation Fix)
+            if (Schema.sObjectType.User.isAccessible()) {
+                for(User us : [SELECT id, Name FROM User WHERE Name = :uName]) {
+                    userId.put(us.Name, us);
+                }
+            } else {
+                System.debug('No access to User object');
+                return taskToInsert; // return early if no access
             }
             
             // Process each subject to create Task records

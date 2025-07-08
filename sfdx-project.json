@@ -2,11 +2,12 @@
   "packageDirectories": [
     {
       "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionNumber": "0.3.0.NEXT",
       "path": "force-app",
       "default": true,
       "package": "Post2Task",
-      "versionDescription": ""
+      "versionDescription": "",
+      "ancestorVersion": "HIGHEST"
     }
   ],
   "name": "2gpManagedPackageV2",
@@ -17,6 +18,8 @@
     "Post2Task": "0HoUj00000001qXKAQ",
     "Post2Task@0.1.0-1": "04tUj0000004IHhIAM",
     "Post2Task@0.1.0-2": "04tUj0000004JTtIAM",
-    "Post2Task@0.1.0-3": "04tUj0000004JVVIA2"
+    "Post2Task@0.1.0-3": "04tUj0000004JVVIA2",
+    "Post2Task@0.2.0-1": "04tUj0000004PUTIA2",
+    "Post2Task@0.3.0-1": "04tUj0000004Wm5IAE"
   }
 }

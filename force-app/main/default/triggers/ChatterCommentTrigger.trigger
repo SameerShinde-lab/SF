@@ -16,8 +16,11 @@ trigger ChatterCommentTrigger on FeedComment (after insert) {
         }
     }
     try{
-        if(taskToInsert != null || !taskToInsert.isEmpty()){
+         // ✅ CHANGED: Added create permission check for Task object
+        if ((taskToInsert != null && !taskToInsert.isEmpty()) && Schema.sObjectType.Task.isCreateable()) {
             insert taskToInsert;
+        } else {
+            System.debug('Skipping task insert due to missing create permission or empty list.');
         }
     }catch(DmlException exp){
         System.debug(exp.getStackTraceString());
