@@ -34,7 +34,7 @@ Chatter Task Creator uses the TriggerSetting custom setting to control task crea
 - The Chatter Task Creation custom setting includes a field TaskActivityDate (Number field).
 - If you set this value to 5, then the due date for tasks (without a mentioned date) will be set to today + 5 days. 
 
----
+----
 
 ## 📝 How to Create a Task via Chatter
 
