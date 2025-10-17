@@ -17,8 +17,9 @@ trigger ChatterPostTrigger on FeedItem (after insert) {
     }
     try{
          // ✅ CHANGED: Added create permission check for Task object
-        if ((taskToInsert != null && !taskToInsert.isEmpty()) && Schema.sObjectType.Task.isCreateable()) {
-            insert taskToInsert;
+        if ((taskToInsert != null && !taskToInsert.isEmpty())) {
+            // Use Database.insert with USER_MODE to enforce CRUD and FLS
+            Database.insert(taskToInsert, AccessLevel.USER_MODE);
         } else {
             System.debug('Skipping task insert due to missing create permission or empty list.');
         }

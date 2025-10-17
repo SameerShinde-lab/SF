@@ -80,8 +80,8 @@ public with sharing class ChatterCreateTaskOperations {
             Map<String, User> userId = new Map<String, User>();
             String pId = parentId;
             
-          // 🚨 CHANGED: Added object access check for User object (ApexCRUDViolation Fix)
-            if (Schema.sObjectType.User.isAccessible()) {
+          // 🚨 CHANGED: Added object access check for User object (ApexCRUDAndFLSViolation Fix)
+            if (Schema.sObjectType.User.isAccessible() && Schema.sObjectType.User.fields.Name.isAccessible()) {
                 for(User us : [SELECT id, Name FROM User WHERE Name = :uName]) {
                     userId.put(us.Name, us);
                 }
