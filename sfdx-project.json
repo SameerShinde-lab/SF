@@ -2,7 +2,7 @@
   "packageDirectories": [
     {
       "versionName": "ver 0.1",
-      "versionNumber": "0.4.0.NEXT",
+      "versionNumber": "0.5.0.NEXT",
       "path": "force-app",
       "default": true,
       "package": "Post2Task",
@@ -22,6 +22,7 @@
     "Post2Task@0.2.0-1": "04tUj0000004PUTIA2",
     "Post2Task@0.3.0-1": "04tUj0000004Wm5IAE",
     "Post2Task@0.4.0-1": "04tUj00000069QPIAY",
-    "Post2Task@0.4.0-2": "04tUj0000006DPBIA2"
+    "Post2Task@0.4.0-2": "04tUj0000006DPBIA2",
+    "Post2Task@0.5.0-1": "04tUj0000008NDxIAM"
   }
 }
